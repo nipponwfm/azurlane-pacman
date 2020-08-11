@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./leaf_falling.css">
+</head>
+<body>
+    <div id="leaf-container"></div>
+    <div id="control">
+        <p>W: up</p>
+        <p>S: down</p>
+        <p>D: right</p>
+        <p>A: left</p>
+    </div>
+    <iframe src="./pacman.html"></iframe>
+    <button onclick="resetFrame()">Play again</button>
+    <button onclick="clearLeafFalling()" id="cleareffect">Clear effect</button>
+    <script>
+        document.querySelector("body").style.width = window.screen.width + "px";
+        resetFrame = () => {
+            document.querySelector("iframe").remove();
+            let iframe = document.createElement("iframe");
+            iframe.setAttribute("src", "./pacman.html");
+            document.body.appendChild(iframe);
+        }
+    </script>
+    <script src="./leaf_falling.js" id="leaffallingscript"></script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<DOCTYPE html>
+    <html>
+
+    <head>
+        <link rel="stylesheet" href="./pacman-style.css">
+    </head>
+
+    <body>
+        <div id="frame">
+            <div id="collected">
+                <p id="point">0/64</p>
+                <img src="./lemon.png">
+            </div>
+            <span id="pacman"></span>
+        </div>
+        <div id="setting">
+            <p>Number of police</p>
+            <div id="amountBot">
+                <button id="minus" class="btn" onclick="changeBotAmount('-')">-</button>
+                <span id="screenAmountBot">1</span>
+                <button id="plus" class="btn" onclick="changeBotAmount('+')">+</button>
+            </div>
+            <p>Smart</p>
+            <input type="range" id="smart" min="0" max="200" value="0">
+            <p>Speed</p>
+            <input type="range" id="speed" min="0" max="6" value="0">
+            <button id="submit" onclick="gameStart()">START</button>
+        </div>
+        <script src="pacman-script.js"></script>
+    </body>
+
+    </html>
